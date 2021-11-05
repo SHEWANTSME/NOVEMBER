@@ -67,44 +67,105 @@
 //
 //	return 0;
 //}
+//#include <iostream>
+//#include<string>
+//#include<vector>
+//using namespace std;
+//template<typename T>
+//string SK(T x) {
+//	std::ostringstream osstream;
+//	osstream << x;
+//	return osstream.str();
+//}int main() {
+//	// ABOUT STRING
+//	string Mystring = "my string";
+//	/*string secondstring = Mystring; // ÀÌ·¸°Ô º¹»ç ¤¡¤¤
+//	cout << secondstring << endl;*/
+//
+//	string secondstring(Mystring, 3); // ¾Õ¿¡ 012ÂÊ Â©¸®°í stringÂïÈû
+//	string st1(Mystring, 3, 5); //strinÂïÈû ¾Õ¿¡3°³Â©¸®°í ±×´ÙÀ½5°³ ÇÑÁ¤ÂïÈû
+//	const char*st3 = "his string"; // c-style
+//	string st2(st3); // his string
+//	string st4(st3, 4); //his°¡ ÂïÈû h i s null ÀÌ·¸°Ô 4°³
+//	string st5(10,'A');// A¿­¹øÂïÈû
+//	// ÇÏ Á¸³ª¸¹³×
+//	vector<char> v;
+//	for (auto &e : "what the fox") {
+//		v.push_back(e);
+//	}
+//	string st6(v.begin(), v.end());
+//	cout << st6 << endl; // Æ÷ÀÎÅÍ ¾Æ´Ô!!
+//	string st7(v.begin(), std::find(v.begin(), v.end(), 'x'));
+//	cout << st7 << endl; // what the fo
+//	string ss(to_string(1234));
+//	int x = stoi(ss);
+//	
+//	string kqu(SK(9293.13));
+//	cout <<  typeid(kqu).name() << kqu <<endl; // typeÀº Ç×»ó ÀÌ·¸°Ô! .nameÀÌ ºÙ´Â´Ù!!
+//	kqu = SK(12);
+//	cout << typeid(kqu).name() << kqu<<endl; // ¾Æ´Ï ¿Ö ¾È‰Î??
+//	/*kqu = S('A');
+//	*///cout << typeid(kqu).name() << kqu <<endl;
+//
+//}
 #include <iostream>
-#include<string>
-#include<vector>
+#include <deque>
+#include <vector>
+#include <stack>
+#include <string>
 using namespace std;
-template<typename T>
-string SK(T x) {
-	std::ostringstream osstream;
-	osstream << x;
-	return osstream.str();
-}int main() {
-	// ABOUT STRING
-	string Mystring = "my string";
-	/*string secondstring = Mystring; // ÀÌ·¸°Ô º¹»ç ¤¡¤¤
-	cout << secondstring << endl;*/
 
-	string secondstring(Mystring, 3); // ¾Õ¿¡ 012ÂÊ Â©¸®°í stringÂïÈû
-	string st1(Mystring, 3, 5); //strinÂïÈû ¾Õ¿¡3°³Â©¸®°í ±×´ÙÀ½5°³ ÇÑÁ¤ÂïÈû
-	const char*st3 = "his string"; // c-style
-	string st2(st3); // his string
-	string st4(st3, 4); //his°¡ ÂïÈû h i s null ÀÌ·¸°Ô 4°³
-	string st5(10,'A');// A¿­¹øÂïÈû
-	// ÇÏ Á¸³ª¸¹³×
-	vector<char> v;
-	for (auto &e : "what the fox") {
-		v.push_back(e);
+// make x
+int main() {
+	int n;
+	cin >> n;
+	for (int i = 0; i < n; i++) {
+		cout << "*";
 	}
-	string st6(v.begin(), v.end());
-	cout << st6 << endl; // Æ÷ÀÎÅÍ ¾Æ´Ô!!
-	string st7(v.begin(), std::find(v.begin(), v.end(), 'x'));
-	cout << st7 << endl; // what the fo
-	string ss(to_string(1234));
-	int x = stoi(ss);
-	
-	string kqu(SK(9293.13));
-	cout <<  typeid(kqu).name() << kqu <<endl; // typeÀº Ç×»ó ÀÌ·¸°Ô! .nameÀÌ ºÙ´Â´Ù!!
-	kqu = SK(12);
-	cout << typeid(kqu).name() << kqu<<endl; // ¾Æ´Ï ¿Ö ¾È‰Î??
-	/*kqu = S('A');
-	*///cout << typeid(kqu).name() << kqu <<endl;
+	for (int i = 0; i < 2 * n - 3; i++) {
+		cout << " ";
+	}
+	for (int i = 0; i < n; i++) {
+		cout << "*";
+	}cout << "\n";
 
+	for (int i = 2; i < n; i++) {
+		for(int j)
+	}
+//	for (int i = 0; i < n; i++) {
+		/*for (int j = 0; j < 2 * n - 1; j++) {
+			if (i == 0) {
+				if (j < n) cout << "*";
+			}
+			else if (i > 0) {
+				if (j == i) cout << "*";
+				else if (j == n + i - 1) cout << "*";
+				else cout <<" ";
+			}
+			else { cout << ""; }
+		}cout <<"\n";*/
+		//for (int j = 0; j < 4 * n - 3; j++) {
+		//	if (i == 0) {
+		//		if (j < n) cout << "*";
+		//		if (j >= 3 * n - 4) cout << "*";
+		//		else cout << " ";
+		//	}
+		//	else if (i > 0) {
+		//		if (j == i) cout << "*";
+		//		else if (j == n + i - 1) cout << "*";
+		//		else if (j == 4 * n - 3 - i) cout << "*";
+		//		else if (j == 4 * n - 3 - n) cout << "*";
+		//		else cout << " ";
+		//	}
+		//	//else cout << "";
+		//}
+		//cout << "\n";
+
+
+
+
+	//}
+	
+	
+	return 0;
 }
