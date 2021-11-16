@@ -71,6 +71,7 @@
 #include <iostream>
 #include <bitset>
 #include <string>
+#include <vector>
 using namespace std;
 // using sublime text without debugging sounds okay..? 
 int main() {
@@ -100,22 +101,36 @@ int main() {
 	items_flag &= ~opt3;
 	cout << "Item3 lost" << bitset<8>(items_flag) << endl;
 
+	//string my_str = "0123456789";
+	//cout << my_str.size() << endl;
+	//cout << std::boolalpha<< my_str.empty() << endl;
 
 
-	string str1("one");
-	string str2 = str1;
-	str2.assign("two").append(" three");
-	for (int i = 0; i < 3; i++) {
-		string s;
-		cin >> s;
-		str2.append(s);
-	}
-	//cout << str2 << endl;
-	std::swap(str1, str2);
-	cout << str1 << " " << str2 << endl;
-	str1.swap(str2);
-	str1.push_back('A'); // 문자열은 안되고 char만 가능
-	str1 += "three";
-	str1 = str2 + "for";
-	다 되는 형태임!!!
+
+	//string hisstr = "abcdefg";
+	//cout << hisstr.c_str() << endl; // C STYLE
+	//cout << hisstr << endl;
+	//const char *arr = hisstr.c_str();
+	//cout << arr[6] << endl;
+	//cout << arr[7] << endl;
+	//cout << (int)arr[6] << endl;
+	//cout << (int)arr[7] << endl;
+	//cout << (int)hisstr[6] << endl;
+	//cout << (int)hisstr[7] << endl;
+	//string sechis(hisstr, 3); // 앞에 3개 짤림
+	//string sechis(hisstr, 3, 2); // 아ㅠ에 3개 짜르면서 총길이 2
+	////string 초기화 할때,, const char * sechis = "fuckyou"해도됨 근데 보통은 string sechis = "fuckyou"하지
+	//string sechis(10, 'a'); // a열개찍힘
+	//std::vector<char>vec; 
+	//for (auto &e : "today is a good day") vec.push_back(e);
+
+	//std::string  second(vec.begin(), vec.end());
+	//cout << second << endl;
+
+
+
+	unsigned  char delta = 0b11001000;
+
+	cout << bitset<8>(delta &(1 << 1)) << endl;
+
 }
