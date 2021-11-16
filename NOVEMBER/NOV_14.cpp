@@ -226,50 +226,47 @@ using namespace std;
 #include <iostream>
 #include <algorithm>
 using namespace std;
-int arr1[1000000];
-int arr2[1000000];
-int arr3[2000000];
+int arr[100];
+int arr2[100];
+bool compare(int x, int y) {
+	return x > y;
+}
 int main() {
-	int n,m;
-	cin >> n;
-	int x;
+	int n; cin >> n;
+	int j,doc_num, rank,nn;
 	for (int i = 0; i < n; i++) {
-		cin >> x;
-		arr1[i] = x;
-	}
-	int y;
-	cin >> m;
-	for (int j = 0; j < m; j++) {
-		cin >> y;
-		arr2[j] = y;
-	}
-	int cntx = 0, cnty = 0, cntz = 0;
-
-	while (cntx < n && cnty < m) {
-		if (arr1[cntx] > arr2[cnty]) {
-			arr3[cntz++] = arr2[cnty++];
-			/*cnty++;
-			cntz = cntx + cnty;
-			cout << arr3[cntz] << endl;*/
-
+		cin >> doc_num >> rank;
+		for (j = 0; j < doc_num; j++) {
+			cin >> arr[j];
+			arr2[j] = arr[j];
+			if (j == rank) nn = arr[j];
 		}
-		else if (arr1[cntx] < arr2[cnty]) {
-			arr3[cntz++] = arr1[cntx++];
-		/*	cntx++;
-			cntz = cnty + cntx;
-			cout << arr3[cntz] << endl;*/
+		sort(arr, arr + doc_num, compare);
 
+		/*for (int i = 0; i < doc_num; i++) {
+			cout << arr[i] << " ";
+		}*/
+
+
+		int kkk=0,kk,cnt=0;
+		for (int k = 0; k < doc_num; k++) {
+			if (arr[k] > nn) {
+				cnt++;
+				if (cnt >= rank + 1) {
+					kkk = cnt;
+				}
+			}
+			
+			//if ((arr[k] != nn) ) cnt++;
+			if (arr[k] == nn ) kk = k + 1-kkk;
+			//if(arr[k] == n && rank ==0;)
 		}
-	}
-	while (cntx < n) arr3[cntz++] = arr1[cntx++];
-	while (cnty < n) arr3[cntz++] = arr2[cnty++];
-	for (int i = 0; i < n + m; i++) {
-		cout << arr3[i] << " ";
+		/*for (int z = 0; z < doc_num; z++) {
+			if (arr[z] == nn) kk = z + 1;
+		}*/
+		cout << kk << endl;
 	}
 
 	
-
-
-
 	return 0;
 }
