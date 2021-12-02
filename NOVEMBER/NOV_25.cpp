@@ -181,5 +181,8 @@ int main() {
 	graphi[9].push_back(2);
 
 	BFS(1);
+	queue<int>q;
+	
+
 	return 0;
 }

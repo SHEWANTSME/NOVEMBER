@@ -447,5 +447,8 @@ int main(void) {
 		}
 	}
 	cout << (int)bfs(0, 0);
-	return 0;
+
+
+
+		return 0;
 }
